@@ -10,22 +10,26 @@ const cards = [
         id: 1,
         title: 'Web',
         image: image1,
-        url:'http://google.com'
+        url:'http://google.com',
+        text: "Texto de la web"
     },
     {
         id: 2,
         title: 'Blog',
         image: image2,
-        url:'http://tumblr.com'
+        url:'http://tumblr.com',
+        text: null
 
     },
     {
         id: 3,
         title: 'Youtube',
         image: image3,
-        url:'http://youtube.com'
+        url:'http://youtube.com',
+        text: "Texto de Youtube"
     }
 
+    
 ]
 
 function Cards() {
@@ -36,8 +40,8 @@ function Cards() {
             {
                 cards.map(card => (
                     <div className='col-md-4' key={card.id}>
-                    <Card title={card.title} imageSource={card.image} url={card.url}/>
-                </div>      
+                        <Card title={card.title} imageSource={card.image} url={card.url} text={card.text}/>
+                    </div>      
                 ))
             }
         </div>
